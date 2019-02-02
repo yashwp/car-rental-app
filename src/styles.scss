@@ -41,3 +41,24 @@ h1, h2, h3, h4, h5, h6 {
 .pointer {
   cursor: pointer;
 }
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+    color: $primary;
+  }
+
+  input[type="text"] {
+    height: 40px;
+    border-radius: 3px;
+    border: 1px solid #4e9277a6;
+    padding-left: 10px;
+    margin: auto 10px;
+  }
+}

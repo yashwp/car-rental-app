@@ -1,13 +1,19 @@
 <div class="catalogue-container py-5">
-  <div class="d-flex justify-content-between p-5">
-    <div>
-      <label for="filter"><span class="lnr lnr-funnel"></span> Filter:</label>
-      <input id="filter" type="text" name="filter" [(ngModel)]="filterText"
-             placeholder="Filter by Transmission, Fuel type or Car type">
-    </div>
-    <div class="pointer" (click)="sortByPrice()">
-      <span class="lnr lnr-sort-amount-asc"></span>
-      <span>Sort By Price</span>
+  <div class="d-flex align-items-center p-5">
+    <div class="row mx-5 w-100">
+      <div class="col-4 pl-5">
+        <div class="input-group">
+          <label for="filter">Filter</label>
+          <input class="ml-0" id="filter" type="text" name="filter" [(ngModel)]="filterText"
+                 placeholder="Transmission, Fuel type or Car type...">
+        </div>
+      </div>
+      <div class="col pr-5 d-flex justify-content-end align-items-center">
+          <div class="pointer" (click)="sortByPrice()">
+            <span class="lnr lnr-sort-amount-asc"></span>
+            <span> Sort By Price</span>
+          </div>
+      </div>
     </div>
   </div>
   <div class="d-flex flex-wrap justify-content-center">

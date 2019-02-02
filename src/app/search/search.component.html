@@ -1,8 +1,16 @@
-<div class="search-container p-5 d-flex">
-  <input type="text" placeholder="Location" name="location" [(ngModel)]="searchObj.location">
-  <input type="text" placeholder="Date" #dp="bsDatepicker" [bsConfig]="config" triggers="mouseenter:click"
-         bsDatepicker [(ngModel)]="searchObj.date" [bsValue]="bsValue" name="date">
-  <button class="btn btn-green" (click)="applySearch()">
-    <span class="lnr lnr-magnifier"></span> Search
-  </button>
+<div class="search-container p-5">
+  <div class="input-group">
+    <label for="loc">Location</label>
+    <input class="ml-0" type="text" id="loc" placeholder="Location" name="location" [(ngModel)]="searchObj.location">
+  </div>
+  <div class="input-group">
+    <label for="date">Start Date</label>
+    <input class="ml-0" type="text" id="date" #dp="bsDatepicker" [bsConfig]="config"
+           bsDatepicker [(ngModel)]="searchObj.date" [bsValue]="bsValue" name="date">
+  </div>
+  <div>
+    <button class="btn btn-green search-btn" (click)="applySearch()">
+      <span class="lnr lnr-magnifier"></span> Search
+    </button>
+  </div>
 </div>

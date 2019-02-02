@@ -3,8 +3,13 @@
 .search-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   background-color: #FFF;
   border-radius: 5px;
   box-shadow: $box-shadow;
+
+  .search-btn {
+    width: 120px;
+    height: 40px;
+  }
 }
