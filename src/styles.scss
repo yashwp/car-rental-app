@@ -1,9 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,600');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,600');
 @import url('https://cdn.linearicons.com/free/1.0.0/icon-font.min.css');
+@import "assets/styles/variables";
 
 * {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -13,4 +14,26 @@ h1, h2, h3, h4, h5, h6 {
 // Datepicker
 .bs-datepicker.theme-green .bs-datepicker-container {
   padding: 0 !important;
+}
+
+.btn-green {
+  color: white;
+  background-color: $green;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  padding: 7px 10px;
+  font-weight: bold;
+
+  &:hover {
+    color: white;
+  }
+}
+
+.fo-11 {
+  font-size: 11px;
+}
+
+.fw-bold {
+  font-weight: bold;
 }

@@ -11,7 +11,7 @@ export class SearchComponent implements OnInit {
   @Output() onSearch: EventEmitter<any> = new EventEmitter();
   bsValue = moment.now();
   searchObj = {
-    location: null,
+    location: 'Indiranagar',
     date: null
   };
   config = {showWeekNumbers: false, dateInputFormat: 'DD/MM/YY'};

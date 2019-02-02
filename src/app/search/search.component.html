@@ -1,6 +1,8 @@
 <div class="search-container p-5 d-flex">
   <input type="text" placeholder="Location" name="location" [(ngModel)]="searchObj.location">
-  <input type="text" placeholder="Date" #dp="bsDatepicker" [bsConfig]="config"
+  <input type="text" placeholder="Date" #dp="bsDatepicker" [bsConfig]="config" triggers="mouseenter:click"
          bsDatepicker [(ngModel)]="searchObj.date" [bsValue]="bsValue" name="date">
-  <button class="btn" (click)="applySearch()">Search</button>
+  <button class="btn btn-green" (click)="applySearch()">
+    <span class="lnr lnr-magnifier"></span> Search
+  </button>
 </div>

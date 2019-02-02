@@ -11,6 +11,9 @@ export class CarsCatalogueComponent implements OnInit, OnChanges {
   @Input() searchData: any;
   cars: Array<Car>;
   filteredCars: Array<Car> = [];
+  filterText = '';
+  direction = 1;
+  isReverse = false;
 
   constructor(
     private commonService: CommonService
@@ -36,6 +39,11 @@ export class CarsCatalogueComponent implements OnInit, OnChanges {
 
   searchCars(data: any) {
     this.filteredCars = this.cars.filter((car: Car) => data.location === car.Location.toLowerCase());
+  }
+
+  sortByPrice() {
+    this.isReverse = !this.isReverse;
+    this.direction = this.isReverse ? 1 : -1;
   }
 
 }

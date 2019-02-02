@@ -1,10 +1,49 @@
 <div class="catalogue-container py-5">
+  <div class="d-flex justify-content-between p-5">
+    <div>
+      <label for="filter"><span class="lnr lnr-funnel"></span> Filter:</label>
+      <input id="filter" type="text" name="filter" [(ngModel)]="filterText"
+             placeholder="Filter by Transmission, Fuel type or Car type">
+    </div>
+    <div (click)="sortByPrice()">
+      <span class="lnr lnr-sort-amount-asc"></span>
+      <span>Sort By Price</span>
+    </div>
+  </div>
   <div class="d-flex flex-wrap justify-content-center">
-    <ng-container *ngFor="let car of filteredCars;">
+    <ng-container
+      *ngFor="let car of filteredCars | filter : filterText | orderBy : {prop: 'Price', direction: direction}">
       <div class="catalogue-card">
-        <img class="img-fluid" [src]="car.Photo" [alt]="car.Name">
-        <h6>{{car.Name}}</h6>
-        <p class="mb-0">{{car.Location}}</p>
+        <div class="position-relative">
+          <span class="tag">
+            <span class="lnr lnr-map-marker"></span>
+            <span> {{car.Location}}</span>
+          </span>
+          <img class="catalogue-img" [src]="car.Photo" [alt]="car.Name">
+        </div>
+        <div class="catalogue-detail p-3">
+          <div>
+            <h5 class="catalogue-name">{{car.Name}}</h5>
+            <div>
+              <span class="text-muted fw-bold fo-11 text-uppercase">Fuel</span>
+              <p class="mb-0">{{car.Fuel_Type}}</p>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between py-2 align-items-center">
+            <div>
+              <span class="text-muted fw-bold fo-11 text-uppercase">Transmission</span>
+              <p class="mb-0">{{car.Transmission}}</p>
+            </div>
+            <div>
+              <span class="text-muted fw-bold fo-11 text-uppercase">Seats</span>
+              <p class="mb-0">{{car.Seats}}</p>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between py-2 align-items-center">
+            <p class="catalogue-price">{{'₹' + car.Price}}</p>
+            <button class="btn btn-green" style="width: 100px;">Select</button>
+          </div>
+        </div>
       </div>
     </ng-container>
   </div>
