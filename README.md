@@ -6,7 +6,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Clone or fork this repository.
 - Install latest version of node.js .
 - Make sure you have NPM installed, to check open cmd and type `npm -v` for version checking.
-- Open the project directory and run command npm install.
+- Open the project directory and run command `npm install`.
+- Go the root directory and open your terminal and run `ng serve` command
 
 ## Development server
 
