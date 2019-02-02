@@ -6,6 +6,7 @@
 /out-tsc
 src/**/*.css
 src/**/*.css.map
+src/**/.sass-cache
 
 # dependencies
 /node_modules
