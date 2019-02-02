@@ -42,6 +42,13 @@ export class CarsCatalogueComponent implements OnInit, OnChanges {
     this.filteredCars = this.cars.filter((car: Car) => data.location === car.Location.toLowerCase());
   }
 
+  checkAvailability(availability: Array<string>): Boolean {
+    if (this.searchData) {
+      return availability.indexOf(this.searchData.date) > -1;
+    }
+  }
+
+
   sortByPrice() {
     this.isReverse = !this.isReverse;
     this.direction = this.isReverse ? 1 : -1;

@@ -39,10 +39,15 @@
               <p class="mb-0">{{car.Seats}}</p>
             </div>
           </div>
-          <div class="d-flex justify-content-between py-2 align-items-center">
+          <div *ngIf="checkAvailability(car.Availability) else naLabel" class="d-flex justify-content-between py-2 align-items-center">
             <p class="catalogue-price">{{'₹' + car.Price}}</p>
             <button class="btn btn-green" style="width: 100px;">Select</button>
           </div>
+          <ng-template #naLabel>
+            <div class="na-tag">
+              Not avaiable
+            </div>
+          </ng-template>
         </div>
       </div>
     </ng-container>
