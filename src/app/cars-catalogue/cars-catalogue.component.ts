@@ -1,6 +1,6 @@
 import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import {Car} from '../model/car';
-import {CommonService} from '../services/common.service';
+import {CommonService} from '../shared/services/common.service';
 
 @Component({
   selector: 'app-cars-catalogue',
