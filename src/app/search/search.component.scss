@@ -1,0 +1,10 @@
+@import "../../assets/styles/variables";
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFF;
+  border-radius: 5px;
+  box-shadow: $box-shadow;
+}

@@ -1,0 +1,15 @@
+@import "../../assets/styles/variables";
+
+.catalogue-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+
+  .catalogue-card {
+    box-shadow: $box-shadow;
+    border-radius: 4px;
+    margin: 20px;
+    padding: 25px;
+  }
+}

@@ -1,0 +1,11 @@
+<div class="catalogue-container py-5">
+  <div class="d-flex flex-wrap justify-content-center">
+    <ng-container *ngFor="let car of filteredCars;">
+      <div class="catalogue-card">
+        <img class="img-fluid" [src]="car.Photo" [alt]="car.Name">
+        <h6>{{car.Name}}</h6>
+        <p class="mb-0">{{car.Location}}</p>
+      </div>
+    </ng-container>
+  </div>
+</div>

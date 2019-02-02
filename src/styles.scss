@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600');
+@import url('https://cdn.linearicons.com/free/1.0.0/icon-font.min.css');
+
+* {
+  font-family: 'Raleway', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+// Datepicker
+.bs-datepicker.theme-green .bs-datepicker-container {
+  padding: 0 !important;
+}
