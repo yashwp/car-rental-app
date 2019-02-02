@@ -24,6 +24,7 @@ export class CarsCatalogueComponent implements OnInit, OnChanges {
     this.commonService.getCars().subscribe((res: Car[]) => {
       if (res) {
         this.cars = [...res];
+        this.filteredCars = [...res];
       }
     }, (err: any) => console.log('Error is: ', err));
   }
