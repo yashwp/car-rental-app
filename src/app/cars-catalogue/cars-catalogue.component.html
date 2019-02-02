@@ -9,10 +9,10 @@
         </div>
       </div>
       <div class="col-sm pr-5 d-flex justify-content-end align-items-center">
-          <div class="pointer" (click)="sortByPrice()">
-            <span class="lnr lnr-sort-amount-asc"></span>
-            <span> Sort By Price</span>
-          </div>
+        <div class="pointer" (click)="sortByPrice()">
+          <span class="lnr lnr-sort-amount-asc"></span>
+          <span> Sort By Price</span>
+        </div>
       </div>
     </div>
   </div>
@@ -21,6 +21,7 @@
       *ngFor="let car of filteredCars | filter : filterText | orderBy : {prop: 'Price', direction: direction}">
       <div class="catalogue-card">
         <div class="position-relative">
+          <span *ngIf="(isSelected && currentCar === car.Name)" class="lnr lnr-checkmark-circle is-selected"></span>
           <span class="tag">
             <span class="lnr lnr-map-marker"></span>
             <span> {{car.Location}}</span>
@@ -45,9 +46,11 @@
               <p class="mb-0">{{car.Seats}}</p>
             </div>
           </div>
-          <div *ngIf="checkAvailability(car.Availability) else naLabel" class="d-flex justify-content-between py-2 align-items-center">
+          <div *ngIf="checkAvailability(car.Availability) else naLabel"
+               class="d-flex justify-content-between py-2 align-items-center">
             <p class="catalogue-price">{{'₹' + car.Price}}</p>
-            <button class="btn btn-green" style="width: 100px;">Select</button>
+            <button class="btn btn-green" style="width: 100px;"
+                    (click)="selectCar(car.Name)">{{(isSelected && currentCar === car.Name) ? 'Deselect' : 'Select'}}</button>
           </div>
           <ng-template #naLabel>
             <div class="na-tag">

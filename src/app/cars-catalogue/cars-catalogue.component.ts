@@ -14,6 +14,8 @@ export class CarsCatalogueComponent implements OnInit, OnChanges {
   filterText = '';
   direction = 1;
   isReverse = false;
+  isSelected = false;
+  currentCar = '';
 
   constructor(
     private commonService: CommonService
@@ -53,6 +55,11 @@ export class CarsCatalogueComponent implements OnInit, OnChanges {
   sortByPrice() {
     this.isReverse = !this.isReverse;
     this.direction = this.isReverse ? 1 : -1;
+  }
+
+  selectCar(name: string) {
+    this.isSelected = !this.isSelected;
+    this.currentCar = name;
   }
 
 }
