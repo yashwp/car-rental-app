@@ -1,5 +1,5 @@
 import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
-import {Car} from '../model/car';
+import {Car} from '../shared/model/car';
 import {CommonService} from '../shared/services/common.service';
 
 @Component({
