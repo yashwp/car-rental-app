@@ -46,6 +46,7 @@ export class CarsCatalogueComponent implements OnInit, OnChanges {
     if (this.searchData) {
       return availability.indexOf(this.searchData.date) > -1;
     }
+    return true;
   }
 
 
